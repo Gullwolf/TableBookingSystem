@@ -42,7 +42,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" text="1" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Button  fx:id="oneDiner" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onDinerButtonClick" text="1" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <padding>
                         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                      </padding></Button>
