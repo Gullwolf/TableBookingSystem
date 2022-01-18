@@ -30,8 +30,8 @@
                            GridPane.rowIndex="2" GridPane.valignment="CENTER"/>
                 <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.halignment="LEFT"
                                GridPane.rowIndex="3" GridPane.valignment="CENTER"/>
-                <Label text="Username:" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER"/>
-                <Label text="Password:" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER"/>
+                <Label text="Username: " GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER"/>
+                <Label text="Password: " GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER"/>
             </children>
         </GridPane>
     </children>
