@@ -7,8 +7,6 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
 public class BookingHomepage {
 

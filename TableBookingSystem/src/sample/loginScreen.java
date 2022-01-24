@@ -58,6 +58,10 @@ public class loginScreen {
                 myWriter.close();
                 System.out.println("Successfully wrote to the file.");
 
+                UserHolder userHolder = UserHolder.getInstance();
+                userHolder.setUser(usernameTextField.getText());
+                System.out.println(userHolder.getUser());
+
                 AnchorPane pane = FXMLLoader.load(getClass().getResource("bookingHomepage.fxml"));
                 rootPane.getChildren().setAll(pane);
 
