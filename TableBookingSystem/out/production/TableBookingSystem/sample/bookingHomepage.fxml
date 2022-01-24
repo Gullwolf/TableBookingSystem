@@ -25,7 +25,7 @@
                     </font>
                 </Label>
                 <Button maxHeight="25" maxWidth="54" minHeight="25" minWidth="54" mnemonicParsing="false" onAction="#onLogoutButtonClick" text="Logout" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-            <DatePicker GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <DatePicker fx:id="dateSelector" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
             <GridPane GridPane.columnIndex="2" GridPane.rowIndex="1">
               <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -42,7 +42,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button  fx:id="oneDiner" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onDinerButtonClick" text="1" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Button fx:id="oneDiner" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onDinerButtonClick" text="1" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <padding>
                         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                      </padding></Button>
@@ -50,96 +50,96 @@
                       <padding>
                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                       </padding></Button>
-                  <Button maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" text="3" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Button fx:id="threeDiners" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onThreeDinersButtonClick" text="3" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                       <padding>
                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                       </padding></Button>
-                  <Button maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" text="4" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Button fx:id="fourDiners" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onFourDinersButtonClick" text="4" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                       <padding>
                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                       </padding></Button>
 
-                   <Button maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" text="5" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                   <Button fx:id="fiveDiners" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onFiveDinersButtonClick" text="5" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                        <padding>
                            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                        </padding></Button>
-                   <Button maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" text="6" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                   <Button fx:id="sixDiners" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onSixDinersButtonClick" text="6" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                        <padding>
                            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                        </padding></Button>
-                   <Button maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" text="7" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                   <Button fx:id="sevenDiners" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onSevenDinersButtonClick" text="7" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                        <padding>
                            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                        </padding></Button>
-                   <Button maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" text="8" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                       <padding>
-                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-                       </padding></Button>
-
-                   <Button maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" text="9" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                       <padding>
-                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-                       </padding></Button>
-                   <Button maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" text="10" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                       <padding>
-                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-                       </padding></Button>
-                   <Button maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" text="11" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                       <padding>
-                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-                       </padding></Button>
-                   <Button maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" text="12" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                   <Button fx:id="eightDiners" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onEightDinersButtonClick" text="8" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                        <padding>
                            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                        </padding></Button>
 
-                   <Button maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" text="13" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                   <Button fx:id="nineDiners" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onNineDinersButtonClick" text="9" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                        <padding>
                            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                        </padding></Button>
-                   <Button maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" text="14" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                   <Button fx:id="tenDiners" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onTenDinersButtonClick" text="10" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                        <padding>
                            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                        </padding></Button>
-                   <Button maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" text="15" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                   <Button fx:id="elevenDiners" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onElevenDinersButtonClick" text="11" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                        <padding>
                            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                        </padding></Button>
-                   <Button maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" text="16" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                       <padding>
-                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-                       </padding></Button>
-
-                   <Button maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" text="17" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-                       <padding>
-                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-                       </padding></Button>
-                   <Button maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" text="18" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-                       <padding>
-                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-                       </padding></Button>
-                   <Button maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" text="19" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-                       <padding>
-                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-                       </padding></Button>
-                   <Button maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" text="20" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                   <Button fx:id="twelveDiners" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onTwelveDinersButtonClick" text="12" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                        <padding>
                            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                        </padding></Button>
 
-                   <Button maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" text="21" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                   <Button fx:id="thirteenDiners" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onThirteenDinersButtonClick" text="13" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                        <padding>
                            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                        </padding></Button>
-                   <Button maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" text="22" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                   <Button fx:id="fourteenDiners" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onFourteenDinersButtonClick" text="14" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                        <padding>
                            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                        </padding></Button>
-                   <Button maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" text="23" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                   <Button fx:id="fifthteenDiners" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onFifteenDinersButtonClick" text="15" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                        <padding>
                            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                        </padding></Button>
-                   <Button maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" text="24+" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                   <Button fx:id="sixteenDiners" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onSixteenDinersButtonClick" text="16" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                       <padding>
+                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                       </padding></Button>
+
+                   <Button fx:id="seventeenDiners" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onSeventeenDinersButtonClick" text="17" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                       <padding>
+                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                       </padding></Button>
+                   <Button fx:id="eighteenDiners" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onEighteenDinersButtonClick" text="18" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                       <padding>
+                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                       </padding></Button>
+                   <Button fx:id="nineteenDiners" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onNineteenDinersButtonClick" text="19" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                       <padding>
+                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                       </padding></Button>
+                   <Button fx:id="twentyDiners" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onTwentyDinersButtonClick" text="20" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                       <padding>
+                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                       </padding></Button>
+
+                   <Button fx:id="twentyOneDiners" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onTwentyOneDinersButtonClick" text="21" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                       <padding>
+                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                       </padding></Button>
+                   <Button fx:id="twentyTwoDiners" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onTwentyTwoDinersButtonClick" text="22" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                       <padding>
+                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                       </padding></Button>
+                   <Button fx:id="twentyThreeDiners" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onTwentyThreeDinersButtonClick" text="23" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                       <padding>
+                           <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                       </padding></Button>
+                   <Button fx:id="twentyFourDiners" maxHeight="19" maxWidth="38" minHeight="19" minWidth="38" mnemonicParsing="false" onAction="#onTwentyFourDinersButtonClick" text="24+" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                        <padding>
                            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                        </padding></Button>
