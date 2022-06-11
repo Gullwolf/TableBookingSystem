@@ -50,35 +50,6 @@ public class EnterDetails {
                 }
             });
         } else {
-//            try {
-//                FileWriter myWriter = new FileWriter("BookingSlip.txt");
-//                myWriter.write(titleTextField.getText() + " " + firstNameTextField.getText() + " " + lastNameTextField.getText() + "\n");
-//                myWriter.write(phoneNumberTextField.getText() + "\n");
-//
-//                DinerHolder numberOfDiners = DinerHolder.getInstance();
-//                int numberDinersInt = numberOfDiners.getNumberOfDiners();
-//                System.out.println(numberDinersInt);
-//                myWriter.write(numberDinersInt + "\n");
-//
-//                UserHolder user = UserHolder.getInstance();
-//                String userString = user.getUser();
-//                System.out.println(userString);
-//                myWriter.write("Booked by: " + userString);
-//
-//                myWriter.close();
-//                System.out.println("Successfully wrote to the file.");
-//
-//                AnchorPane pane = FXMLLoader.load(getClass().getResource("bookingHomepage.fxml"));
-//                rootPane.getChildren().setAll(pane);
-//
-//                System.out.println("Booking made");
-//
-//            } catch (IOException e) {
-//                System.out.println("An error occurred.");
-//                e.printStackTrace();
-//            }
-
-
             DinerHolder numberOfDiners = DinerHolder.getInstance();
             int numberDinersInt = numberOfDiners.getNumberOfDiners();
 
@@ -109,31 +80,21 @@ public class EnterDetails {
 
                 statement = connection.createStatement();
 
-                String query = "INSERT INTO BookingReservations (Title, FirstName, LastName, PhoneNumber, NumberOfDiners, BookingDate) VALUES ('" + titleTextField.getText() +
+                UserHolder user = UserHolder.getInstance();
+                String userString = user.getUser();
+
+                String query = "INSERT INTO BookingReservations (Title, FirstName, LastName, PhoneNumber, NumberOfDiners, BookingDate, BookedBy) VALUES ('" + titleTextField.getText() +
                         "', '" + firstNameTextField.getText() +
                         "', '" + lastNameTextField.getText() +
                         "', '" + phoneNumberTextField.getText() +
                         "', '" + numberDinersInt +
-                        "', '" + dateOfBooking + "');";
+                        "', '" + dateOfBooking +
+                        "', '" + userString + "');";
                 System.out.println(query);
 
                 statement.executeUpdate(query);
                 System.out.println("INSERT Statement run.");
 
-//                resultSet = statement.executeQuery("SELECT * FROM BookingReservations");
-//                System.out.println("ID\tTitle\tFirstName\tLastName\tCustomerMessage\tPhoneNumber\tBookingDate\tNumberOfPeople");
-//                System.out.println("==\t=====\t=========\t========\t===============\t===========\t===========\t==============");
-//                //Processing Data Returned.
-//                while (resultSet.next()) {
-//                    System.out.println(resultSet.getString(8) + "\t" +
-//                            resultSet.getString(1) + "\t" +
-//                            resultSet.getString(2) + "\t" +
-//                            resultSet.getString(3) + "\t" +
-//                            resultSet.getString(4) + "\t" +
-//                            resultSet.getString(5) + "\t" +
-//                            resultSet.getString(6) + "\t" +
-//                            resultSet.getString(7));
-//                }
             } catch (SQLException sqlex) {
                 sqlex.printStackTrace();
             } finally {
