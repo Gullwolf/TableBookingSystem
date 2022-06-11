@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="TableBookingSystem0.0.3.jnlp">
+  <information>
+    <title>TableBookingSystem</title>
+    <vendor>Unknown</vendor>
+    <description>TableBookingSystem</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="TableBookingSystem0.0.3.jar" size="38139" download="eager" />
+    <jar href="commons-lang-2.6.jar" size="284220" download="eager" />
+    <jar href="commons-logging-1.1.1.jar" size="60686" download="eager" />
+    <jar href="hsqldb-2.3.1.jar" size="1467326" download="eager" />
+    <jar href="jackcess-2.1.6.jar" size="855824" download="eager" />
+    <jar href="ucanaccess-4.0.1.jar" size="356386" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="600" height="400" main-class="sample.Main"  name="TableBookingSystem" />
+  <update check="background"/>
+</jnlp>

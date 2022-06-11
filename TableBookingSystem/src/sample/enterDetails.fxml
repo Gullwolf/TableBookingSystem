@@ -31,6 +31,14 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <Separator orientation="VERTICAL" prefHeight="140.0" visible="false" />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Separator />
+                        <Button fx:id="goBack" mnemonicParsing="false" onAction="#onGoBackButtonClick" text="Go Back" />
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox>
