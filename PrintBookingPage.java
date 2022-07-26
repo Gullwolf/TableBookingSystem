@@ -61,16 +61,19 @@ public class PrintBookingPage {
                 try {
                     FileWriter myWriter = new FileWriter("table Bookings " + dateSelector.getValue() + ".html");
                     myWriter.write("<!DOCTYPE html>\n");
+                    myWriter.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"main.css\"/>\n");
                     myWriter.write("<html> <h1>Table Bookings for: " + dateSelector.getValue() + "</h1> <body> <table align='left' border='2'>\n");
                     myWriter.write("<tr>\n");
-                    myWriter.write("<td>ID</td>\n");
-                    myWriter.write("<td>Title</td>\n");
-                    myWriter.write("<td>FirstName</td>\n");
-                    myWriter.write("<td>LastName</td>\n");
-                    myWriter.write("<td>CustomerMessage</td>\n");
-                    myWriter.write("<td>PhoneNumber</td>\n");
-                    myWriter.write("<td>BookingDate</td>\n");
-                    myWriter.write("<td>NumberOfPeople</td>\n");
+                    myWriter.write("<th>ID</th>\n");
+                    myWriter.write("<th>Title</th>\n");
+                    myWriter.write("<th>FirstName</th>\n");
+                    myWriter.write("<th>LastName</th>\n");
+                    myWriter.write("<th>CustomerMessage</th>\n");
+                    myWriter.write("<th>PhoneNumber</th>\n");
+                    myWriter.write("<th>BookingDate</th>\n");
+                    myWriter.write("<th>BookingTime</th>\n");
+                    myWriter.write("<th>NumberOfPeople</th>\n");
+                    myWriter.write("<th>BookedBy</th>\n");
                     myWriter.write("</tr>\n");
 
                     //Processing Data Returned.
@@ -83,7 +86,9 @@ public class PrintBookingPage {
                         myWriter.write("<td>" + resultSet.getString(6) + "</td>\n");
                         myWriter.write("<td>" + resultSet.getString(5) + "</td>\n");
                         myWriter.write("<td>" + resultSet.getString(7) + "</td>\n");
+                        myWriter.write("<td>" + resultSet.getString(10) + "</td>\n");
                         myWriter.write("<td>" + resultSet.getString(8) + "</td>\n");
+                        myWriter.write("<td>" + resultSet.getString(9) + "</td>\n");
                         myWriter.write("</tr>\n");
                     }
                     myWriter.write("</table></body></html>");

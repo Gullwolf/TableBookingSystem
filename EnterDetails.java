@@ -82,13 +82,17 @@ public class EnterDetails {
                 UserHolder user = UserHolder.getInstance();
                 String userString = user.getUser();
 
-                String query = "INSERT INTO BookingReservations (Title, FirstName, LastName, PhoneNumber, NumberOfDiners, BookingDate, BookedBy) VALUES ('" + titleTextField.getText() +
+                TimeHolder timeHolder = TimeHolder.getInstance();
+                String timeOfBooking = timeHolder.getTimeOfBooking();
+
+                String query = "INSERT INTO BookingReservations (Title, FirstName, LastName, PhoneNumber, NumberOfDiners, BookingDate, BookedBy, BookingTime) VALUES ('" + titleTextField.getText() +
                         "', '" + firstNameTextField.getText() +
                         "', '" + lastNameTextField.getText() +
                         "', '" + phoneNumberTextField.getText() +
                         "', '" + numberDinersInt +
                         "', '" + dateOfBooking +
-                        "', '" + userString + "');";
+                        "', '" + userString +
+                        "', '" + timeOfBooking + "');";
                 System.out.println(query);
 
                 statement.executeUpdate(query);

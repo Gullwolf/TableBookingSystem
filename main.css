@@ -1,0 +1,24 @@
+h1{
+    font-weight: 700;
+    color: forestgreen;
+}
+
+th{
+	background-color: gray;
+	
+}
+
+td {
+  text-align: center;
+  vertical-align:center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+body {
+	background-color: #FFFFF0;
+}

@@ -1,29 +1,52 @@
 package sample;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextInputDialog;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.Node;
 
 import java.io.FileWriter;
+import java.net.URL;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.ZoneId;
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.ResourceBundle;
 
-public class BookingHomepage {
+public class BookingHomepage implements Initializable {
 
     @FXML
     private DatePicker dateSelector;
 
     @FXML
     private AnchorPane rootPane;
+
+    @FXML
+    private ComboBox<String> comboBox;
+
+    ObservableList<String> list = FXCollections.observableArrayList("12:00", "12:15", "12:30", "12:45",
+            "13:00", "13:15", "13:30", "13:45",
+            "14:00", "14:15", "14:30", "14:45",
+            "15:00", "15:15", "15:30", "15:45",
+            "16:00", "16:15", "16:30", "16:45",
+            "17:00", "17:15", "17:30", "17:45",
+            "18:00", "18:15", "18:30", "18:45",
+            "19:00", "19:15", "19:30", "19:45",
+            "20:00", "20:15", "20:30", "20:45",
+            "21:00", "21:15", "21:30", "21:45",
+            "22:00");
+
+    public void initialize(URL location, ResourceBundle resources) {
+        comboBox.setItems(list);
+
+    }
 
     public void onPrintTableButtonOnClick(ActionEvent actionEvent) throws IOException {
 //        //variables
@@ -187,6 +210,7 @@ public class BookingHomepage {
         Node source = (Node) actionEvent.getSource();
         String id = source.getId();
         System.out.println(id);
+        System.out.println(comboBox.getValue());
 
         switch (id) {
             case "oneDiner":
@@ -306,8 +330,16 @@ public class BookingHomepage {
                 }
         }
 
+        //boolean test = (Integer.valueOf(comboBox.getValue().replace(":", "")) <= Integer.valueOf(LocalTime.now().toString().replace(":","")));
+
+        System.out.println(comboBox.getValue().replace(":", ""));
+        System.out.println(LocalTime.now().getHour() + "" + LocalTime.now().getMinute());
+        System.out.println(LocalTime.now().isBefore(LocalTime.parse(comboBox.getValue())));
+        int timeNow = Integer.parseInt(LocalTime.now().getHour() + "" + LocalTime.now().getMinute());
+        int bookingTime = Integer.valueOf(comboBox.getValue().replace(":", ""));
+
         if (dataCorrect) {
-            if ((dateSelector.getValue() == null) || (dateSelector.getValue().isBefore(LocalDate.now()))) {
+            if ((dateSelector.getValue() == null) || (dateSelector.getValue().isBefore(LocalDate.now())) || (comboBox.getValue() == null) || (!(dateSelector.getValue().isBefore(LocalDate.now())) && (bookingTime <= timeNow))) {
                 System.out.println(LocalDate.now());
                 System.out.println(dateSelector.getValue());
                 Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -324,7 +356,10 @@ public class BookingHomepage {
                 dateHolder.setDate(dateSelector.getValue().toString());
                 System.out.println(dateSelector.getValue().toString());
 
-                AnchorPane pane = FXMLLoader.load(getClass().getResource("timeSelectionPage.fxml"));
+                TimeHolder timeHolder = TimeHolder.getInstance();
+                timeHolder.setTimeOfBooking(comboBox.getValue());
+
+                AnchorPane pane = FXMLLoader.load(getClass().getResource("enterDetails.fxml"));
                 rootPane.getChildren().setAll(pane);
 
                 System.out.println("Selected diner.");
